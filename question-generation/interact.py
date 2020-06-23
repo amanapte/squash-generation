@@ -129,8 +129,8 @@ def run():
             metadata = json.loads(f.read())
         args.top_p = metadata["settings"]["top_p"]
 
-    logging.basicConfig(level=logging.INFO)
-    logger = logging.getLogger(__file__).setLevel(logging.ERROR)
+    logging.basicConfig(level=logging.ERROR)
+    logger = logging.getLogger(__file__)
     logger.info(pformat(args))
 
     random.seed(args.seed)
