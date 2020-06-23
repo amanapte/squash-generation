@@ -130,7 +130,7 @@ def run():
         args.top_p = metadata["settings"]["top_p"]
 
     logging.basicConfig(level=logging.INFO)
-    logger = logging.getLogger(__file__)
+    logger = logging.getLogger(__file__).setLevel(logging.ERROR)
     logger.info(pformat(args))
 
     random.seed(args.seed)
