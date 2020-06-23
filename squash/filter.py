@@ -55,8 +55,8 @@ class Paragraph(object):
         unique_qas = self.remove_exact_duplicate_answers(unique_qs, "specific")
         unique_qas = self.remove_exact_duplicate_answers(unique_qas, "general")
 
-        print("%d / %d left after removing exact duplicate questions" % (len_unique_qs, len_original_qas))
-        print("%d / %d left after removing exact duplicate answers" % (len(unique_qas), len_original_qas))
+        # print("%d / %d left after removing exact duplicate questions" % (len_unique_qs, len_original_qas))
+        # print("%d / %d left after removing exact duplicate answers" % (len(unique_qas), len_original_qas))
 
         # From the remaining candidates, carry out filtering based on filter_frac
         # For filtering, remove unanswerable questions, generic and bad entity questions and finally
