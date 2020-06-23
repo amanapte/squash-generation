@@ -18,16 +18,16 @@ do
 
 	echo $KEY
 
-	echo 'Extracting answers ...'
+	#echo 'Extracting answers ...'
 	python squash/extract_answers.py --key $KEY
 
-	echo 'Generating questions ...'
+	#echo 'Generating questions ...'
 	python question-generation/interact.py \
 		--model_checkpoint question-generation/gpt2_corefs_question_generation \
 		--model_type gpt2 \
 		--key $KEY
 
-	echo 'Running QA module ...'
+	#echo 'Running QA module ...'
 	python question-answering/run_squad.py \
 		--bert_model question-answering//bert_large_qa_model \
 		--do_predict \
@@ -37,13 +37,13 @@ do
 		--predict_batch_size 16 \
 	  	--version_2_with_negative
 
-	 echo 'Combining Q and A ...'
+	 #echo 'Combining Q and A ...'
 	 python squash/combine_qa.py --key $KEY
 
-	echo 'Filtering bad Q/As ...'
+	#echo 'Filtering bad Q/As ...'
 	python squash/filter.py --key $KEY
 
-	echo 'Popping top value from queue ...'
+	#echo 'Popping top value from queue ...'
 	sed -i '1d' squash/temp/queue.txt
 
 done
