@@ -46,7 +46,7 @@ if sys.version_info[0] == 2:
 else:
     import pickle
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__).setLevel(logging.ERROR)
 
 
 class SquadExample(object):
