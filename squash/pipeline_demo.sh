@@ -45,5 +45,8 @@ do
 
 	#echo 'Popping top value from queue ...'
 	sed -i '1d' squash/temp/queue.txt
+	
+	json_name="${KEY}.json"
+	cp /content/squash-generation/squash/final/${json_name} /content/drive/'My Drive'/SQUASH/Output_JSON/
 
 done
