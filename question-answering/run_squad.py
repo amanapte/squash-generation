@@ -46,7 +46,7 @@ if sys.version_info[0] == 2:
 else:
     import pickle
 
-logger = logging.getLogger(__name__).setLevel(logging.ERROR)
+logger = logging.getLogger(__name__)
 
 
 class SquadExample(object):
@@ -858,7 +858,7 @@ def main():
 
     logging.basicConfig(format = '%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                         datefmt = '%m/%d/%Y %H:%M:%S',
-                        level = logging.INFO if args.local_rank in [-1, 0] else logging.WARN)
+                        level = logging.ERROR if args.local_rank in [-1, 0] else logging.WARN)
 
     logger.info("device: {} n_gpu: {}, distributed training: {}, 16-bits training: {}".format(
         device, n_gpu, bool(args.local_rank != -1), args.fp16))
