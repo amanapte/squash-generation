@@ -26,7 +26,7 @@ parser.add_argument('--key', type=str, default=None,
 
 args = parser.parse_args()
 
-#nlp = spacy.load('en_core_web_sm')
+nlp = spacy.load('en_core_web_sm')
 
 
 class Paragraph(object):
