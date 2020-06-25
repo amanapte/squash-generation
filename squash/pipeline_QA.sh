@@ -15,6 +15,7 @@
 # To understand the format expected for this file, look at squash/temp/quac_869/metadata.json
 
 KEY="Custom"
+echo $KEY
 
 echo 'Extracting answers ...'
 python squash/extract_answers.py --key $KEY
