@@ -1,6 +1,6 @@
 import simplejson as json
 
-json_list = [ "/conent/squash-generation/squash/final/Custom.json",
+json_list = [ "/content/squash-generation/squash/final/Custom.json",
                 "/content/squash-generation/squash/temp/Custom/final_qa_set.json", 
                 "/content/squash-generation/squash/temp/Custom/generated_questions.json",
                 "/content/squash-generation/squash/temp/Custom/nbest_predictions.json", 
