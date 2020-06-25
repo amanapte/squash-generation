@@ -2,8 +2,7 @@ import simplejson as json
 
 json_list = [ "/final/Custom.json",
                 "/temp/Custom/final_qa_set.json", 
-                "/temp/Custom/generated_questions.json", 
-                "/temp/Custom/metadata.json",
+                "/temp/Custom/generated_questions.json",
                 "/temp/Custom/nbest_predictions.json", 
                 "/temp/Custom/null_odds.json",
                 "/temp/Custom/predictions.json" ]
