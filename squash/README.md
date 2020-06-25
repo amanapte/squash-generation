@@ -11,3 +11,6 @@ This is the codebase for the SQUASH pipeline which uses pretrained question gene
 5. `squad_eval_utils.py` - Utilities to provide F1 overlap between two answer spans, used for the filtering process.
 6. `pipeline.sh` - Run the whole SQUASH pipeline.
 7. `pipeline_custom.sh` - Run the SQUASH pipeline with custom inputs specified as the first command line argument. Make sure you have create `squash/temp/$KEY` and `squash/temp/$KEY/metadata.json` before running this.
+8. `pipeline_QA.sh` - Run SQUASH for custom paragraph via `SQUASH.ipynb`.
+9. `beautify_json.py` - Script to beautify output json for `pipeline_QA.sh`.
+10. `SQUASH.ipynb` - Python notebook to SQUASH.
