@@ -34,7 +34,7 @@ python question-answering/run_squad.py \
 	--do_lower_case \
 	--predict_file squash/temp/$KEY/generated_questions.json \
 	--output_dir squash/temp/$KEY \
-  	--version_2_with_negativesquas
+  	--version_2_with_negative
 
  echo 'Combining Q and A ...'
  python squash/combine_qa.py --key $KEY
@@ -43,9 +43,16 @@ echo 'Filtering bad Q/As ...'
 python squash/filter.py --key $KEY
 
 echo 'Beautifying JSONs ...'
-python squash/beautify_json.py --
-echo 'QA pairs generated and stored in "/content/squash-generation/squash/final/Custom.json"'
+python squash/beautify_json.py
 
 echo 'QA pairs generated and stored in "/content/squash-generation/squash/final/Custom.json"'
 
-echo 'QA pairs generated and stored in "/content/squash-generation/squash/final/Custom.json"'
+echo 'QA pairs generated and stored in "/content/squash-generation/squash/temp/final_qa_set.json"'
+
+echo 'QA pairs generated and stored in "/content/squash-generation/squash/temp/generated_questions.json"'
+
+echo 'QA pairs generated and stored in "/content/squash-generation/squash/temp/nbest_predictions.json"'
+
+echo 'QA pairs generated and stored in "/content/squash-generation/squash/temp/null_odds.json"'
+
+echo 'QA pairs generated and stored in "/content/squash-generation/squash/temp/predictions.json"'
