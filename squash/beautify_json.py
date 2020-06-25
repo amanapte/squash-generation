@@ -1,11 +1,11 @@
 import simplejson as json
 
-json_list = [ "./final/Custom.json",
-                "./temp/Custom/final_qa_set.json", 
-                "./temp/Custom/generated_questions.json",
-                "./temp/Custom/nbest_predictions.json", 
-                "./temp/Custom/null_odds.json",
-                "./temp/Custom/predictions.json" ]
+json_list = [ "/conent/squash-generation/squash//final/Custom.json",
+                "/content/squash-generation/squash/temp/Custom/final_qa_set.json", 
+                "/content/squash-generation/squash/temp/Custom/generated_questions.json",
+                "/content/squash-generation/squash/temp/Custom/nbest_predictions.json", 
+                "/content/squash-generation/squash/temp/Custom/null_odds.json",
+                "/content/squash-generation/squash/temp/Custom/predictions.json" ]
 
 for i in json_list:
     with open(i,"a") as f:
