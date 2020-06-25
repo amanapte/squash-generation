@@ -8,7 +8,7 @@ json_list = [ "/content/squash-generation/squash/final/Custom.json",
                 "/content/squash-generation/squash/temp/Custom/predictions.json" ]
 
 for i in json_list:
-    with open(i,"a") as f:
+    with open(i,) as f:
         obj = json.load(f)
         f.close()     
     outfile = open(i, "w")
